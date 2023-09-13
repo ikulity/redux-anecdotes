@@ -6,7 +6,7 @@ const AnecdoteList = () => {
 
   const anecdotes = useSelector(({ filter, anecdotes }) => {
     if (filter === '') {
-      return anecdotes
+      return [...anecdotes]
     }
     return anecdotes.filter(anec => anec.content.includes(filter))
   })
